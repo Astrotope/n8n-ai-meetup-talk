@@ -29,7 +29,7 @@ An intelligent Slack chatbot that acts as "AstroGuide," an expert astronomer and
 3. OpenAI Chat Model generates the response
 4. Slack Chat Reply posts the answer back to the channel
 
-[Back to TOC](#table-of-contents)
+[= Back to TOC](#table-of-contents)
 
 ## Ingest Astronomy Articles from RSS Feed
 
@@ -60,7 +60,7 @@ A comprehensive data ingestion pipeline that fetches astronomy articles from Phy
 12. Store Articles in Pinecone Vector Store saves to database
 13. Post Summary to Slack shares articles in Slack channel
 
-[Back to TOC](#table-of-contents)
+[= Back to TOC](#table-of-contents)
 
 ## RAG Agent-Assisted Chat with Astronomy Articles
 
@@ -83,7 +83,7 @@ A public-facing chat interface powered by a RAG (Retrieval-Augmented Generation)
 5. Embeddings OpenAI handles vector search
 6. Simple Memory maintains conversation context
 
-[Back to TOC](#table-of-contents)
+[= Back to TOC](#table-of-contents)
 
 ## RSS Feed Summary to Slack
 
@@ -109,7 +109,7 @@ A scheduled workflow that creates daily summaries of astronomy news from RSS fee
 7. Code formats articles as markdown list
 8. Send a message posts summary to Slack channel
 
-[Back to TOC](#table-of-contents)
+[= Back to TOC](#table-of-contents)
 
 ## Web Contact Form to Slack
 
@@ -133,7 +133,7 @@ A simple contact form integration that captures website visitor inquiries and fo
 - Email (optional)
 - Message (required, textarea)
 
-[Back to TOC](#table-of-contents)
+[= Back to TOC](#table-of-contents)
 
 ---
 
