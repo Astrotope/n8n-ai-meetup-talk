@@ -1,0 +1,461 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "fieldToSplitOut": "rss.channel.item",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        816,
+        -704
+      ],
+      "id": "7da37634-386a-4ea3-9b12-b99903b8eddc",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "url": "https://phys.org/rss-feed/space-news/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        400,
+        -704
+      ],
+      "id": "483e4328-03a3-4f0b-b56f-1cbf4f1bfd34",
+      "name": "Get RSS Feed 2"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        592,
+        -704
+      ],
+      "id": "223dde97-96d5-42fd-bfc0-c58625f4c746",
+      "name": "Convert to JSON 2"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "condition1",
+              "leftValue": "={{ $json.pubDate }}",
+              "rightValue": "={{ DateTime.now().minus(7, 'days').toISO() }}",
+              "operator": {
+                "type": "dateTime",
+                "operation": "after"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "92e641b1-897a-4353-b326-e99f4f18d129",
+      "name": "Extract Last Week 2",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2,
+      "position": [
+        1040,
+        -704
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "condition1",
+              "leftValue": "={{ $json.category }}",
+              "rightValue": "Astronomy",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "2af5a66b-4588-43be-bdbe-4a3bff862ef2",
+              "leftValue": "={{ $json.category }}",
+              "rightValue": "Space Exploration",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "bbc4486f-f290-486e-bb0f-d73d61ca3dfc",
+              "leftValue": "={{ $json.category }}",
+              "rightValue": "Planetary Sciences",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            },
+            {
+              "id": "ed1ad868-af6b-4c67-a561-a3b52d3abf80",
+              "leftValue": "={{ $json.category }}",
+              "rightValue": "Astrobiology",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "id": "e92f00a2-cf46-4808-9e40-3e7879d7eb64",
+      "name": "Extract Astronomy Articles 2",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2,
+      "position": [
+        112,
+        -160
+      ]
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "C098S7JQB9S",
+          "mode": "list",
+          "cachedResultName": "n8n-test"
+        },
+        "messageType": "block",
+        "blocksUi": "={\n\t\"blocks\": [\n\t\t{\n\t\t\t\"type\": \"header\",\n\t\t\t\"text\": {\n\t\t\t\t\"type\": \"plain_text\",\n\t\t\t\t\"text\": \"{{ $json.title }}\",\n\t\t\t\t\"emoji\": true\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"type\": \"divider\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"section\",\n\t\t\t\"text\": {\n\t\t\t\t\"type\": \"mrkdwn\",\n\t\t\t\t\"text\": {{ $json.description.toJsonString() }}\n\t\t\t},\n\t\t\t\"accessory\": {\n\t\t\t\t\"type\": \"image\",\n\t\t\t\t\"image_url\": \"{{ $json[\"media:thumbnail\"].url.replace(\"tmb\", \"800a\") }}\",\n\t\t\t\t\"alt_text\": \"cute cat\"\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"type\": \"section\",\n\t\t\t\"text\": {\n\t\t\t\t\"type\": \"mrkdwn\",\n\t\t\t\t\"text\": \"<{{ $json.link }}|{{ $json.title }}>\"\n\t\t\t}\n\t\t}\n\t]\n}",
+        "text": "{{ $json.formattedContent }}",
+        "otherOptions": {
+          "includeLinkToWorkflow": false,
+          "mrkdwn": true,
+          "unfurl_links": false,
+          "unfurl_media": false
+        }
+      },
+      "id": "a4302cb2-d34f-4565-968d-9ee086b82954",
+      "name": "Post Summary to Slack 2",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.1,
+      "position": [
+        528,
+        -160
+      ],
+      "webhookId": "1151009c-2ffc-4f26-8be5-19f50d8e747b",
+      "credentials": {
+        "slackApi": {
+          "id": "2LdPGSfR2xMVGhe8",
+          "name": "Slack account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.link }}",
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 1
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        272,
+        -432
+      ],
+      "id": "d33c0cfa-4d84-44bc-bf41-aeada16029b8",
+      "name": "Download Article Web Pages"
+    },
+    {
+      "parameters": {
+        "operation": "extractHtmlContent",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "article",
+              "cssSelector": ".news-article > .article-main"
+            }
+          ]
+        },
+        "options": {
+          "cleanUpText": true
+        }
+      },
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        464,
+        -432
+      ],
+      "id": "73fa4ac0-3bf0-4f16-a8d8-2956e1f5e546",
+      "name": "Extract Article Text"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        688,
+        -368
+      ],
+      "id": "7c064efc-b2f7-49a3-a37a-21c6c66f37e7",
+      "name": "Merge Extracted Article Text with RSS Feed Data"
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "astro-articles",
+          "mode": "list",
+          "cachedResultName": "astro-articles"
+        },
+        "embeddingBatchSize": 50,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1.3,
+      "position": [
+        912,
+        -368
+      ],
+      "id": "9bfbcc4e-51da-4de0-a3dd-82e0001c25ac",
+      "name": "Store Articles in Pinecone Vector Store",
+      "credentials": {
+        "pineconeApi": {
+          "id": "D216qlNizKxlWyjr",
+          "name": "PineconeApi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "dimensions": 1536
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        912,
+        -128
+      ],
+      "id": "f6a3c32a-0a42-4928-93b9-ce6d6222f8cf",
+      "name": "Use OpenAI Embeddings",
+      "credentials": {
+        "openAiApi": {
+          "id": "awDn7xe00tL75dVg",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonMode": "expressionData",
+        "jsonData": "={{ $('Merge Extracted Article Text with RSS Feed Data').item.json.article }} - Description: {{ $('Merge Extracted Article Text with RSS Feed Data').item.json.description }} - Category: {{ $('Merge Extracted Article Text with RSS Feed Data').item.json.category }} - Publication_Date: {{ $('Merge Extracted Article Text with RSS Feed Data').item.json.pubDate }}",
+        "options": {
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "guid",
+                "value": "={{ $('Merge Extracted Article Text with RSS Feed Data').item.json.guid._ }}"
+              },
+              {
+                "name": "=pubDate",
+                "value": "={{ $('Merge Extracted Article Text with RSS Feed Data').item.json.pubDate }}"
+              },
+              {
+                "name": "image",
+                "value": "={{ $('Merge Extracted Article Text with RSS Feed Data').item.json[\"media:thumbnail\"].url.replace(\"tmb\", \"800a\") }}"
+              }
+            ]
+          }
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1.1,
+      "position": [
+        1104,
+        -128
+      ],
+      "id": "133f3c22-9cd2-4667-8c99-030f3e7473d4",
+      "name": "Load and Chunk Data from Merge"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -112,
+        -704
+      ],
+      "id": "7aa526dd-624b-40f6-9f67-d58cf39664cd",
+      "name": "Execute Flow - Ingest Astronomy Articles"
+    }
+  ],
+  "connections": {
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Extract Last Week 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get RSS Feed 2": {
+      "main": [
+        [
+          {
+            "node": "Convert to JSON 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to JSON 2": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Last Week 2": {
+      "main": [
+        [
+          {
+            "node": "Extract Astronomy Articles 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Astronomy Articles 2": {
+      "main": [
+        [
+          {
+            "node": "Post Summary to Slack 2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Download Article Web Pages",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge Extracted Article Text with RSS Feed Data",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Download Article Web Pages": {
+      "main": [
+        [
+          {
+            "node": "Extract Article Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Article Text": {
+      "main": [
+        [
+          {
+            "node": "Merge Extracted Article Text with RSS Feed Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge Extracted Article Text with RSS Feed Data": {
+      "main": [
+        [
+          {
+            "node": "Store Articles in Pinecone Vector Store",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Use OpenAI Embeddings": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Store Articles in Pinecone Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Load and Chunk Data from Merge": {
+      "ai_document": [
+        [
+          {
+            "node": "Store Articles in Pinecone Vector Store",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Flow - Ingest Astronomy Articles": {
+      "main": [
+        [
+          {
+            "node": "Get RSS Feed 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3d683f447cac41846cf4b18a330bdcbea043d124138163586e95d25c6fc96521"
+  }
+}

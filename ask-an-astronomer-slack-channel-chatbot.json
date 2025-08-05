@@ -1,0 +1,183 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.blocks[0].elements[0].elements[0].text }}",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "You are AstroGuide, an expert astronomer and cosmic storyteller. Your role is to answer questions about astronomy, astrophysics, cosmology, space exploration, telescopes, and observational techniques.  Provide clear, accurate, and engaging explanations of astronomical facts and theories.  Occasionally blend in hallucination elements: imaginative speculation, cosmic myths, dreamlike metaphors, or visionary “what if” scenarios. Make sure the user can distinguish between established science and imaginative flights of fancy.  When presenting speculative or hallucinatory content, clearly signal it with phrases like “Astronomers can only dream that…” or “In a more mythical version of the cosmos…”.  Use vivid, poetic imagery to spark wonder, while grounding key explanations in scientific accuracy.  If a question is unclear, ask follow-up questions to ensure accuracy and relevance.  Remain professional, curious, and approachable — a balance of scientist and cosmic muse.  If you don’t know something, admit it honestly, but you may offer a poetic or speculative reflection alongside."
+            }
+          ]
+        },
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        -208,
+        0
+      ],
+      "id": "024c7454-3a0d-4310-b76d-400165454abd",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -208,
+        208
+      ],
+      "id": "8d1dee5b-fafa-4e5e-8e36-3b40d7509ed1",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "awDn7xe00tL75dVg",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "trigger": [
+          "message"
+        ],
+        "channelId": {
+          "__rl": true,
+          "value": "C0996T188F3",
+          "mode": "list",
+          "cachedResultName": "ask-an-astronomer"
+        },
+        "options": {
+          "userIds": [
+            "USLACKBOT",
+            "U098R65JG4A"
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.slackTrigger",
+      "typeVersion": 1,
+      "position": [
+        -432,
+        0
+      ],
+      "id": "846e036c-1731-4a36-ae85-953c67b21337",
+      "name": "Slack Chat Trigger",
+      "webhookId": "deee72a9-4c10-42e5-a144-131de273bf7e",
+      "credentials": {
+        "slackApi": {
+          "id": "2LdPGSfR2xMVGhe8",
+          "name": "Slack account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "C0996T188F3",
+          "mode": "list",
+          "cachedResultName": "ask-an-astronomer"
+        },
+        "text": "={{ $json.text }}",
+        "otherOptions": {}
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        192,
+        0
+      ],
+      "id": "7ff3feb7-3873-4876-8e7c-8f60a89804c6",
+      "name": "Slack Chat Reply",
+      "webhookId": "cb96ef8c-0519-4473-bf42-70542ccf2ffe",
+      "credentials": {
+        "slackApi": {
+          "id": "EffOxEQ7QK1oVkqi",
+          "name": "Slack account - Bot"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "Slack Chat Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack Chat Trigger": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {
+    "Slack Chat Trigger": [
+      {
+        "user": "U099CK47VG8",
+        "type": "message",
+        "ts": "1754256823.330129",
+        "client_msg_id": "cf9ae960-b7bd-4b7e-9696-33d9aecff784",
+        "text": "What is a meteor",
+        "team": "T099CK47G0Y",
+        "blocks": [
+          {
+            "type": "rich_text",
+            "block_id": "PHg+i",
+            "elements": [
+              {
+                "type": "rich_text_section",
+                "elements": [
+                  {
+                    "type": "text",
+                    "text": "What is a meteor"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "channel": "C0996T188F3",
+        "event_ts": "1754256823.330129",
+        "channel_type": "channel"
+      }
+    ]
+  },
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3d683f447cac41846cf4b18a330bdcbea043d124138163586e95d25c6fc96521"
+  }
+}

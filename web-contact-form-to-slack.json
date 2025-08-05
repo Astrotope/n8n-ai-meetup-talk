@@ -1,0 +1,92 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Contact Form",
+        "formDescription": "Say Hello. We are here to help :-)",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Name",
+              "placeholder": "John Doe",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Message",
+              "fieldType": "textarea",
+              "placeholder": "Say Hello. We would love to hear from you 😀",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Email",
+              "fieldType": "email",
+              "placeholder": "john.doe@example.com"
+            }
+          ]
+        },
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        -672,
+        0
+      ],
+      "id": "4cfc7afa-7952-41e0-8bda-a9f1825b3fe4",
+      "name": "Website Contact Form",
+      "webhookId": "c50233f7-cbf6-4959-a289-7e7804f6268c"
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "C098NB4SR35",
+          "mode": "list",
+          "cachedResultName": "contact-form"
+        },
+        "messageType": "block",
+        "blocksUi": "={\n\t\"blocks\": [\n\t\t{\n\t\t\t\"type\": \"header\",\n\t\t\t\"text\": {\n\t\t\t\t\"type\": \"plain_text\",\n\t\t\t\t\"text\": \"New Contact - {{ $json.Name }}\",\n\t\t\t\t\"emoji\": true\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"type\": \"divider\"\n\t\t},\n\t\t{\n\t\t\t\"type\": \"section\",\n\t\t\t\"text\": {\n\t\t\t\t\"type\": \"mrkdwn\",\n\t\t\t\t\"text\": \"Timestamp: 📆 {{ $json.submittedAt.toDateTime().format('dd/LL/yyyy') }} ⏰ {{ $json.submittedAt.toDateTime().toLocal().format('HH:mm') }}\"\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"type\": \"section\",\n\t\t\t\"text\": {\n\t\t\t\t\"type\": \"mrkdwn\",\n\t\t\t\t\"text\": {{ $json.Message.toJsonString() }}\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"type\": \"section\",\n\t\t\t\"text\": {\n\t\t\t\t\"type\": \"mrkdwn\",\n\t\t\t\t\"text\": \"{{ $json.Name }} - <mailto:{{ $json.Email }}|{{ $json.Email }}>\"\n\t\t\t}\n\t\t}\n\t]\n}",
+        "text": "=New Contact - {{ $json.Name }} at {{ $json.submittedAt }}",
+        "otherOptions": {
+          "includeLinkToWorkflow": false
+        }
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [
+        -464,
+        0
+      ],
+      "id": "e96e3c7e-af51-4c77-97e1-516c4b694554",
+      "name": "Log Contact in Slack",
+      "webhookId": "93c583ac-0ced-4aea-9ff1-db60e5edd360",
+      "credentials": {
+        "slackApi": {
+          "id": "2LdPGSfR2xMVGhe8",
+          "name": "Slack account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Website Contact Form": {
+      "main": [
+        [
+          {
+            "node": "Log Contact in Slack",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3d683f447cac41846cf4b18a330bdcbea043d124138163586e95d25c6fc96521"
+  }
+}
