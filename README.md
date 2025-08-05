@@ -152,3 +152,19 @@ A simple contact form integration that captures website visitor inquiries and fo
 3. Pinecone vector database setup
 4. Slack workspace and bot tokens
 5. Webhook configurations for triggers
+
+## Required Services
+
+### Free Services (No Credit Card Required)
+
+1. **n8n** - [14-day free trial](https://n8n.io/pricing/)
+2. **Slack** - [Choose Pro plan with 30-day trial](https://slack.com/intl/en-nz/pricing/) (sign-up, create a workspace, choose the 30-day trial not the subscription)
+3. **Pinecone** - [Free Starter plan](https://www.pinecone.io/pricing/)
+
+### Paid Services
+
+**OpenAI API** - [Sign up here](https://openai.com/api/) by clicking "Log in" and selecting "API Platform" from the dropdown. Then:
+
+1. Click the settings icon (gear wheel) in the top-right
+2. Select "Billing" from the left-hand menu to setup a credit card and purchase credits (~$5 USD)
+3. Select "API keys" from the left-hand menu and click "+ Create new secret key" to generate your API key
