@@ -12,6 +12,9 @@ These n8n workflows serve as practical demonstrations of n8n's automation capabi
 
 ## Table of Contents
 
+**Presentation**
+- [n8n Talk Slides (PDF)](./n8n-talk.pdf)
+
 **Getting Started**
 - [About These Demonstration Workflows](#about-these-demonstration-workflows)
 - [Services Required to run these Workflows](#services-required-to-run-these-workflows)
@@ -33,9 +36,6 @@ These n8n workflows serve as practical demonstrations of n8n's automation capabi
 **Additional Resources**
 - [Workflow Platform Comparison: n8n vs Make vs Zapier](./N8N_MAKE_ZAPIER_COMPARISON.md)
 - [Understanding Text Embeddings (Detailed Guide)](./TEXT_EMBEDDING_EXPLAINED.md)
-
-**Presentation**
-- [n8n Talk Slides (PDF)](./n8n-talk.pdf)
 
 ## About These Demonstration Workflows
 
