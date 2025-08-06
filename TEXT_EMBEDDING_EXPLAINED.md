@@ -1,3 +1,9 @@
+> **AI-Generated Content Disclaimer**
+> 
+> This document was created using Anthropic Claude Sonnet 4 and may contain factual errors or outdated information. While care has been taken to minimize inaccuracies and verify information against official sources, all facts, pricing, and technical details should be independently verified using the source links provided throughout this document.
+> 
+> Please check official platform websites and documentation before making business decisions based on this content.
+
 # Understanding Text Embeddings: From Words to Meaning
 
 *How the astronomy workflows transform text into intelligent, searchable knowledge*
