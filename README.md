@@ -4,9 +4,9 @@
 > 
 > Please check official platform websites and documentation before making business decisions based on this content.
 
-# n8n Astronomy Workflows
+# Notes and resources from n8n talk @ Christchurch AI Meetup
 
-Notes and resources from n8n talk @ Christchurch AI Meetup. These workflows serve as practical demonstrations of n8n's automation capabilities, modern AI integration patterns, and real-world data processing scenarios. They provide some example workflows that show the integration of n8n, Slack, and Pinecone, in the context of extracting and using information from the [Phys.org](https://phys.org/) website. In addition to this, a simple webform workflow is provided as an introductory example, and a chatbot app in Slack to show a basic LLM workflow.
+These n8n workflows serve as practical demonstrations of n8n's automation capabilities, modern AI integration patterns, and real-world data processing scenarios. They provide some example workflows that show the integration of n8n, Slack, and Pinecone, in the context of extracting and using information from the [Phys.org](https://phys.org/) website. In addition to this, a simple webform workflow is provided as an introductory example, and a chatbot app in Slack to show a basic LLM workflow.
 
 ## Table of Contents
 
