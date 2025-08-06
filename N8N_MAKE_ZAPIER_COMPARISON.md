@@ -18,7 +18,7 @@ The workflow automation landscape is dominated by three major platforms, each ta
 | **Hosting Options** | Self-hosted + Cloud | Cloud Only | Cloud Only |
 | **Pricing Model** | Per workflow execution | Per operation | Per task |
 | **Free Tier** | Unlimited (self-hosted) | 1,000 operations/month | 100 tasks/month |
-| **Integration Count** | 400+ | 2,000+ | 8,000+ |
+| **Integration Count** | 100+ | 1,500+ | 7,000+ |
 | **Code Support** | Full JS/Python | Limited | Basic (Code by Zapier) |
 | **Data Control** | Complete (self-hosted) | Limited | Limited |
 | **Learning Curve** | Steep | Moderate | Gentle |
