@@ -23,6 +23,48 @@ The workflow automation landscape is dominated by three major platforms, each ta
 | **Data Control** | Complete (self-hosted) | Limited | Limited |
 | **Learning Curve** | Moderate++ | Moderate | Gentle |
 
+## Understanding Pricing Models: Per-Execution vs Per-Operation
+
+The pricing models create dramatically different costs for data-heavy workflows. Understanding this difference is crucial for platform selection.
+
+### How Each Platform Counts Usage
+
+**n8n executions**: 
+- One complete workflow run from trigger to completion = 1 execution
+- Processing 1 record or 1,000 records = still 1 execution
+- Multiple workflow steps don't multiply the count
+
+**Make operations**: 
+- Each module action counts separately: "Every time a module in a scenario performs an action, it counts as one operation" (per Make documentation)
+- Processing 100 records through 3 modules = 300 operations
+- Every individual action on every individual item counts
+
+**Zapier tasks**: 
+- Each step action counts separately, similar to Make operations
+- Processing 100 records through 3 steps = 300 tasks
+- Every action on every item counts as a separate task
+
+### Real-World Example: Customer Data Processing
+
+**Scenario**: Daily workflow that reads 500 new customers from a database, enriches each with external API data, then writes to CRM.
+
+**Workflow steps**: 
+1. Read customers from database
+2. For each customer, call enrichment API  
+3. Write enriched data to CRM
+
+**Usage counting**:
+- **n8n**: 1 execution per day (regardless of 500 customers)
+- **Make**: 1,500 operations per day (500 customers × 3 modules)
+- **Zapier**: 1,500 tasks per day (500 customers × 3 steps)
+
+**Monthly impact**: 
+- **n8n**: ~30 executions/month
+- **Make**: ~45,000 operations/month  
+- **Zapier**: ~45,000 tasks/month
+
+**Key Insight**: The per-item charging model means costs scale directly with data volume, while n8n's per-execution model provides predictable costs regardless of processing volume.
+
 ## Detailed Platform Analysis
 
 ### n8n: The Developer's Choice
@@ -51,8 +93,9 @@ The workflow automation landscape is dominated by three major platforms, each ta
 - Custom integration requirements
 
 **Pricing (Cloud)**:
-- **Starter**: Free 14-day trial, then paid plans
-- **Pro**: Based on workflow executions
+- **Free Trial**: 14-day trial available
+- **Starter**: €24/month (monthly) or €20/month (annually)
+- **Pro**: Higher execution volumes, additional features
 - **Self-hosted**: Completely free with unlimited executions
 
 ### Make: The Visual Powerhouse
@@ -172,7 +215,7 @@ The workflow automation landscape is dominated by three major platforms, each ta
 - Vector database operations for AI workflows
 
 **Make**:
-- 2,000+ pre-built app modules
+- 1,500+ pre-built app modules
 - AI applications and intelligent automation tools
 - HTTP requests with authentication
 - Webhooks and instant triggers
@@ -224,27 +267,27 @@ The workflow automation landscape is dominated by three major platforms, each ta
 | **Error Handling** | Advanced retry/catch | Built-in retry | Basic retry mechanism |
 | **Monitoring** | Full logging/metrics | Execution history | Run history |
 
-## Cost Analysis
+## Cost Analysis Framework
 
-### Low Volume (< 1,000 tasks/month)
-- **n8n**: Free (self-hosted)
-- **Make**: Free
-- **Zapier**: Free
+### Low Volume Scenarios (simple integrations)
+- **All platforms** offer competitive free tiers
+- **n8n**: Free (self-hosted) or €20-24/month (cloud)
+- **Make**: Free tier (1,000 operations)
+- **Zapier**: Free tier (100 tasks) or $19.99/month
+- **Costs remain similar** for basic automation needs
 
-### Medium Volume (10,000 tasks/month)
-- **n8n**: $0 (self-hosted) + infrastructure costs
-- **Make**: ~$9/month
-- **Zapier**: ~$50/month
+### High Volume Data Processing Scenarios
+- **n8n advantage**: Fixed execution cost regardless of records processed
+- **Make/Zapier consideration**: Per-operation/task charges scale with data volume
+- **Cost impact**: Difference becomes substantial as data volumes increase
 
-### High Volume (100,000 tasks/month)
-- **n8n**: $0 (self-hosted) + infrastructure costs
-- **Make**: ~$100/month
-- **Zapier**: ~$500/month
+### Key Cost Factors
+- **Data volume per workflow**: How many records are processed?
+- **Workflow complexity**: How many steps/modules are involved?
+- **Execution frequency**: How often do workflows run?
+- **Platform charging model**: Per-execution vs per-operation differences
 
-### Enterprise Volume (1M+ tasks/month)
-- **n8n**: Infrastructure costs only
-- **Make**: Custom pricing
-- **Zapier**: $1,000+ per month
+**Recommendation**: Test actual workflows on each platform to determine real costs for your specific use case.
 
 ## Security and Compliance Considerations
 
@@ -300,7 +343,7 @@ The workflow automation landscape is dominated by three major platforms, each ta
 - Have technical team members comfortable with code
 - Need to integrate with custom APIs or services without pre-built connectors
 - Require complete data control and self-hosting
-- Process high volumes of data cost-effectively
+- **Process large volumes of data and want predictable costs**
 - Want unlimited scalability and customization
 - Need complex business logic beyond visual workflows
 - Require advanced AI/ML integrations and vector databases
@@ -308,7 +351,7 @@ The workflow automation landscape is dominated by three major platforms, each ta
 ### Choose Make if you:
 - Want visual workflow design with AI-powered automation
 - Need moderate complexity features with enterprise scalability
-- Require cost-effective automation for growing businesses
+- **Have simple, low-volume integrations and prefer managed services**
 - Have some technical users but prefer no-code approach
 - Need strong data transformation with intelligent processing
 - Want balance of features and simplicity
@@ -320,7 +363,7 @@ The workflow automation landscape is dominated by three major platforms, each ta
 - Use many popular SaaS tools  
 - Want minimal setup time
 - Prefer managed service approach
-- Process low to medium volumes
+- **Have simple, low-volume integrations and want extensive app coverage**
 
 ## Getting Started Recommendations
 
@@ -379,4 +422,4 @@ Consider starting with the platform that best matches your current technical cap
 - [Zapier Pricing](https://zapier.com/pricing)
 - [n8n vs Make vs Zapier Comparison](https://www.digidop.com/blog/n8n-vs-make-vs-zapier)
 
-*Note: Pricing and feature information accurate as of January 2025. Check individual platform websites for current details and offerings.*
+*Note: Pricing and feature information accurate as of January 2025. Integration counts vary by source and date. Per-execution vs per-operation pricing models create different cost profiles - understanding these differences is crucial for platform selection. Currency note: n8n pricing in EUR, Make/Zapier pricing in USD. Always check official websites and test actual workflows to understand real costs for your specific use case.*
