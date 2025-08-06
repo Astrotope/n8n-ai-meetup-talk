@@ -6,6 +6,8 @@
 
 # Notes and resources from n8n talk @ Christchurch AI Meetup
 
+<img width="1024" height="1024" alt="intelligent-workflows-with-n8n" src="https://github.com/user-attachments/assets/a29b5e99-0cb3-4d63-be3d-0e72943fb8e2" />
+
 These n8n workflows serve as practical demonstrations of n8n's automation capabilities, modern AI integration patterns, and real-world data processing scenarios. They provide some example workflows that show the integration of n8n, Slack, and Pinecone, in the context of extracting and using information from the [Phys.org](https://phys.org/) website. In addition to this, a simple webform workflow is provided as an introductory example, and a chatbot app in Slack to show a basic LLM workflow.
 
 ## Table of Contents
