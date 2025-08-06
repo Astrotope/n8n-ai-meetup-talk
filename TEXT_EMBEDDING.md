@@ -32,7 +32,7 @@ You do this because you've learned that certain concepts relate to each other. T
 
 ```mermaid
 graph TD
-    A[Text: "Telescope revealed atmospheric compositions"] --> B[Human Brain]
+    A["Text: Telescope revealed atmospheric compositions"] --> B[Human Brain]
     B --> C[Concept: Scientific Discovery]
     B --> D[Concept: Space Observation]  
     B --> E[Concept: Planetary Analysis]
