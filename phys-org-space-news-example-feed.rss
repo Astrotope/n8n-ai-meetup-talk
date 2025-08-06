@@ -1,39 +1,249 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>400 Bad Request</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 50px;
-            background-color: #f9f9f9;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        h1 {
-            color: #000;
-      	    font-weight: 600
-        }
-        p {
-            color: #333;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>400 Bad Request</h1>
-        <p>Your request has been blocked by our server's security policies.</p>
-        <hr>
-        <p>If you believe this is an error, please contact our <a href="https://sciencex.com/help/" rel="nofollow">support team</a>.</p>
-    </div>
-</body>
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+                    <title>Space News - Space, Astronomy, Space Exploration</title>
+            <link>https://phys.org/space-news/</link>
+            <language>en-us</language> 
+            <description>The latest science news on astronomy, astrobiology,  and space exploration from Phys.org.</description>
+                        <item>
+                <title>NASA races to put nuclear reactors on Moon and Mars</title>
+                <description>The United States is rushing to put nuclear power reactors on the moon and Mars, and hopes to launch the first system by the end of the decade.</description>
+                <link>https://phys.org/news/2025-08-nasa-nuclear-reactors-moon-mars.html</link>
+                <category>Space Exploration </category>
+                <pubDate>Tue, 05 Aug 2025 15:50:01 EDT</pubDate>
+                <guid isPermaLink="false">news673627230</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/signed-by-acting-admin.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Distributed Spacecraft Autonomy could enable future satellite swarms to complete science goals with little human help</title>
+                <description>Astronauts living and working on the moon and Mars will rely on satellites to provide services like navigation, weather, and communications relays. While managing complex missions, automating satellite communications will allow explorers to focus on critical tasks instead of manually operating satellites.</description>
+                <link>https://phys.org/news/2025-08-spacecraft-autonomy-enable-future-satellite.html</link>
+                <category>Space Exploration </category>
+                <pubDate>Tue, 05 Aug 2025 14:47:04 EDT</pubDate>
+                <guid isPermaLink="false">news673624022</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/what-is-nasas-distribu.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Lunar photobioreactors could provide food and oxygen on the moon</title>
+                <description>Astronauts exploring the moon will need all the help they can get, and scientists have spent lots of time and plenty of money coming up with different systems to do so. Two of the critical needs of any long-term lunar mission are food and oxygen, both of which are expensive to ship to the moon from Earth.</description>
+                <link>https://phys.org/news/2025-08-lunar-photobioreactors-food-oxygen-moon.html</link>
+                <category>Astrobiology Planetary Sciences </category>
+                <pubDate>Tue, 05 Aug 2025 12:56:04 EDT</pubDate>
+                <guid isPermaLink="false">news673617361</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/lunar-photobioreactors.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Deep view of Abell 3667 illuminates the past of a galaxy cluster and the future of astronomical imaging</title>
+                <description>Galaxy clusters are among the largest structures in our universe, consisting of hundreds or thousands of galaxies that have become gravitationally bound together over billions of years. Astrophysicists have long been eager to understand the formation of these imposing structures. The histories of galaxy clusters not only help us understand how the universe formed, but they also provide constraints on the properties of dark matter—an invisible material that doesn&#039;t emit or reflect light and is found in high concentrations around clusters of galaxies.</description>
+                <link>https://phys.org/news/2025-08-deep-view-abell-illuminates-galaxy.html</link>
+                <category>Astronomy </category>
+                <pubDate>Tue, 05 Aug 2025 12:14:03 EDT</pubDate>
+                <guid isPermaLink="false">news673614841</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/deep-view-of-abell-366.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Sweeping survey maps hundreds of satellite systems orbiting dwarf galaxies</title>
+                <description>We usually think of satellites as small objects orbiting planets or stars. But in the broader universe, galaxies themselves can have satellites—smaller galaxies bound by gravity that orbit a larger host, carrying with them stars, gas, dust, and dark matter.</description>
+                <link>https://phys.org/news/2025-08-survey-hundreds-satellite-orbiting-dwarf.html</link>
+                <category>Astronomy </category>
+                <pubDate>Tue, 05 Aug 2025 10:54:03 EDT</pubDate>
+                <guid isPermaLink="false">news673610041</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/new-survey-maps-hundre.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Supergiant star&#039;s gigantic bubble surprises scientists</title>
+                <description>Astronomers have discovered a vast and expanding bubble of gas and dust surrounding a red supergiant star—the largest structure of its kind ever seen in the Milky Way. The bubble, which contains as much mass as the sun, was blown out in a mysterious stellar eruption about 4,000 years ago. Why the star survived such a powerful event is a puzzle, scientists say.</description>
+                <link>https://phys.org/news/2025-08-supergiant-star-gigantic-scientists.html</link>
+                <category>Astronomy </category>
+                <pubDate>Tue, 05 Aug 2025 10:23:03 EDT</pubDate>
+                <guid isPermaLink="false">news673608182</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/supergiant-stars-gigan.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>First MetOp-SG satellite sealed within Ariane 6 fairing</title>
+                <description>As preparations to launch Europe&#039;s first MetOp Second Generation, MetOp-SG-A1, satellite continue on track, the team at Europe&#039;s Spaceport in Kourou, French Guiana, has bid a heartfelt farewell to this precious satellite as it was sealed from view within the Ariane 6 rocket&#039;s fairing.</description>
+                <link>https://phys.org/news/2025-08-metop-sg-satellite-ariane-fairing.html</link>
+                <category>Space Exploration </category>
+                <pubDate>Tue, 05 Aug 2025 10:20:01 EDT</pubDate>
+                <guid isPermaLink="false">news673607130</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/first-metop-sg-satelli.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>NASA&#039;s Black Marble: Stories from the night sky</title>
+                <description>Viewed from space, Earth at night tells endless stories. Using satellite data, we can track population growth, natural disaster damage, cultural celebrations, and even space weather.</description>
+                <link>https://phys.org/news/2025-08-nasa-black-marble-stories-night.html</link>
+                <category>Space Exploration Planetary Sciences </category>
+                <pubDate>Tue, 05 Aug 2025 10:10:03 EDT</pubDate>
+                <guid isPermaLink="false">news673607016</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2024/earth-1.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>NASA&#039;s Lunar Trailblazer moon mission ends</title>
+                <description>NASA&#039;s Lunar Trailblazer ended its mission to the moon on July 31. Despite extensive efforts, mission operators were unable to establish two-way communications after losing contact with the spacecraft the day following its Feb. 26 launch.</description>
+                <link>https://phys.org/news/2025-08-nasa-lunar-trailblazer-moon-mission.html</link>
+                <category>Space Exploration Planetary Sciences </category>
+                <pubDate>Tue, 05 Aug 2025 09:40:03 EDT</pubDate>
+                <guid isPermaLink="false">news673605601</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/nasas-lunar-trailblaze-2.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Baby star sets off explosion, gets caught in blast</title>
+                <description>Astronomers have observed an explosion in space that is pushing back against and influencing the baby star which triggered the explosion in the first place. If explosions like this one are common around young stars, then the young stars and their planets are exposed to a harsher environment than previously thought.</description>
+                <link>https://phys.org/news/2025-08-baby-star-explosion-caught-blast.html</link>
+                <category>Astronomy Planetary Sciences </category>
+                <pubDate>Tue, 05 Aug 2025 09:07:03 EDT</pubDate>
+                <guid isPermaLink="false">news673603621</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/baby-star-sets-off-exp.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>JWST observations shed more light on the nature of a distant galaxy</title>
+                <description>Using the James Webb Space Telescope (JWST), an international team of astronomers has observed a distant faint galaxy designated JADES-GS-z14-1. Results of the observational campaign, published July 30 on the arXiv preprint server, provide more insights into the nature and properties of this galaxy.</description>
+                <link>https://phys.org/news/2025-08-jwst-nature-distant-galaxy.html</link>
+                <category>Astronomy </category>
+                <pubDate>Tue, 05 Aug 2025 08:00:02 EDT</pubDate>
+                <guid isPermaLink="false">news673542692</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/jwst-observations-shed.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>NASA Acting Chief Duffy issues directive to speed up moon reactor plans</title>
+                <description>NASA&#039;s acting administrator, Sean Duffy, plans to accelerate the construction of a nuclear reactor that could be used on the moon and alter the way NASA will partner with industry to replace the aging International Space Station.</description>
+                <link>https://phys.org/news/2025-08-nasa-chief-duffy-issues-moon.html</link>
+                <category>Space Exploration </category>
+                <pubDate>Tue, 05 Aug 2025 07:20:08 EDT</pubDate>
+                <guid isPermaLink="false">news673596671</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2023/moon.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Marking 13 years on Mars, NASA&#039;s Curiosity picks up new skills</title>
+                <description>Thirteen years after Curiosity landed on Mars, engineers are finding ways to make the NASA rover even more productive. The six-wheeled robot has been given more autonomy and the ability to multitask—improvements designed to make the most of Curiosity&#039;s energy source, a multi-mission radioisotope thermoelectric generator (MMRTG). Increased efficiency means the rover has ample power as it continues to decipher how the ancient Martian climate changed, transforming a world of lakes and rivers into the chilly desert it is today.</description>
+                <link>https://phys.org/news/2025-08-years-mars-nasa-curiosity-skills.html</link>
+                <category>Space Exploration </category>
+                <pubDate>Mon, 04 Aug 2025 16:10:35 EDT</pubDate>
+                <guid isPermaLink="false">news673542629</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/marking-13-years-on-ma.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Two spacecraft fly precisely in line to imitate a solar eclipse, capture a stunning image and test new technology</title>
+                <description>During a solar eclipse, astronomers who study heliophysics are able to study the sun&#039;s corona—its outer atmosphere—in ways they are unable to do at any other time.</description>
+                <link>https://phys.org/news/2025-08-spacecraft-fly-precisely-line-imitate.html</link>
+                <category>Astronomy </category>
+                <pubDate>Mon, 04 Aug 2025 15:05:03 EDT</pubDate>
+                <guid isPermaLink="false">news673538701</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/2-spacecraft-flew-exac.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Hubble surveys supernova-rich spiral</title>
+                <description>Rich with detail, the spiral galaxy NGC 1309 shines in this NASA/ESA Hubble Space Telescope image. NGC 1309 is about 100 million light-years away in the constellation Eridanus.</description>
+                <link>https://phys.org/news/2025-08-hubble-surveys-supernova-rich-spiral.html</link>
+                <category>Astronomy </category>
+                <pubDate>Mon, 04 Aug 2025 12:15:02 EDT</pubDate>
+                <guid isPermaLink="false">news673528501</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/hubble-surveys-superno.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Meet &#039;lite intermediate black holes,&#039; the supermassive black hole&#039;s smaller, much more mysterious cousin</title>
+                <description>Black holes are massive, strange and incredibly powerful astronomical objects. Scientists know that supermassive black holes reside in the centers of most galaxies.</description>
+                <link>https://phys.org/news/2025-08-lite-intermediate-black-holes-supermassive.html</link>
+                <category>Astronomy </category>
+                <pubDate>Mon, 04 Aug 2025 11:53:04 EDT</pubDate>
+                <guid isPermaLink="false">news673527181</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/meet-lite-intermediate.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>China&#039;s meteoric rise into space</title>
+                <description>While NASA maintains the lead in human space exploration, other nations have already begun their own projects. Take the China National Space Agency, for example, with their CLEP, or Chinese Lunar Exploration Program. If you have any doubts about the objectives of the program, just check out their logo: a stylized crescent moon with two footprints in the middle.</description>
+                <link>https://phys.org/news/2025-08-china-meteoric-space.html</link>
+                <category>Space Exploration </category>
+                <pubDate>Mon, 04 Aug 2025 10:40:02 EDT</pubDate>
+                <guid isPermaLink="false">news673519136</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/chinas-meteoric-rise-i.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Is Earth orbit doomed to be a billionaire&#039;s  playground?</title>
+                <description>If you want to get to the moon, you need to spend an enormous amount of resources developing, creating, testing, and deploying a variety of spacecraft and technologies. All you need is money. Lots of money. For decades, the only entities with enough green in checking accounts were large governments or multi-national consortia. But nowadays we have some absurdly wealthy, and absurdly motivated, individuals who have stars in their eyes and designs on space missions of their own.</description>
+                <link>https://phys.org/news/2025-08-earth-orbit-doomed-billionaire-playground.html</link>
+                <category>Space Exploration </category>
+                <pubDate>Mon, 04 Aug 2025 10:21:03 EDT</pubDate>
+                <guid isPermaLink="false">news673521661</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/is-earth-orbit-doomed.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Giant, free-floating planets may form their own planetary systems</title>
+                <description>New research from the University of St Andrews has found that giant free floating planets have the potential to form their own miniature planetary systems without the need for a star.</description>
+                <link>https://phys.org/news/2025-08-giant-free-planets-planetary.html</link>
+                <category>Planetary Sciences </category>
+                <pubDate>Mon, 04 Aug 2025 10:19:04 EDT</pubDate>
+                <guid isPermaLink="false">news673521542</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/giant-free-floating-pl.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>The moon is useless, so let&#039;s preserve it</title>
+                <description>I don&#039;t think space or lunar tourism is going to be the big draw that transforms the moon into something unrecognizable. Instead, I think it&#039;s going to be more about large-scale mining and industrialization that scars the lunar surface. So when it comes to possible industrial hellscapes that the moon might turn into, think less Las Vegas and more… Gary, Indiana. No offense, Gary, but you&#039;re kind of an industrial hellscape.</description>
+                <link>https://phys.org/news/2025-08-moon-useless.html</link>
+                <category>Planetary Sciences </category>
+                <pubDate>Mon, 04 Aug 2025 10:00:01 EDT</pubDate>
+                <guid isPermaLink="false">news673519124</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/the-moon-is-useless-so.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>NASA&#039;s Europa clipper radar instrument proves itself at Mars</title>
+                <description>As it soared past Mars in March, NASA&#039;s Europa Clipper conducted a critical radar test that had been impossible to accomplish on Earth. Now that mission scientists have studied the full stream of data, they can declare success: The radar performed just as expected, bouncing and receiving signals off the region around Mars&#039; equator without a hitch.</description>
+                <link>https://phys.org/news/2025-08-nasa-europa-clipper-radar-instrument.html</link>
+                <category>Space Exploration Planetary Sciences </category>
+                <pubDate>Mon, 04 Aug 2025 09:50:04 EDT</pubDate>
+                <guid isPermaLink="false">news673519090</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/nasas-europa-clipper-r-2.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>The global race to space isn&#039;t just about big countries</title>
+                <description>The United States and China aren&#039;t the only powerful, wealthy nations in the world, and they&#039;re certainly not the only nations active in space. For example, there are the Russians, who are…kind of distracted at the moment, so for our purposes there really isn&#039;t much to talk about there.</description>
+                <link>https://phys.org/news/2025-08-global-space-isnt-big-countries.html</link>
+                <category>Space Exploration </category>
+                <pubDate>Mon, 04 Aug 2025 09:31:03 EDT</pubDate>
+                <guid isPermaLink="false">news673518661</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/the-global-race-to-spa.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Astronomers observe a giant outburst of X-ray binary RX J0440.9+4431</title>
+                <description>Astronomers from Wuhan University in China have employed the Insight-HXMT satellite to observe a giant outburst that occurred in the X-ray binary RX J0440.9+4431 about three years ago. Results of the observations, presented July 24 on the pre-print server arXiv, provide a wealth of data regarding the properties and behavior of this system.</description>
+                <link>https://phys.org/news/2025-08-astronomers-giant-outburst-ray-binary.html</link>
+                <category>Astronomy </category>
+                <pubDate>Mon, 04 Aug 2025 09:30:05 EDT</pubDate>
+                <guid isPermaLink="false">news673518350</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/astronomers-observe-a-1.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Feasibility of chasing 58 km/s interstellar visitor examined by researchers</title>
+                <description>Since 2017, three interstellar objects have been spotted passing through our solar system: 1I/ʻOumuamua, 2I/Borisov… and just this month, 3I/ATLAS. Discovered on July 1 by the Asteroid Terrestrial-Impact Last Alert Survey, 3I/ATLAS is zipping through the inner solar system in the last half of 2025.</description>
+                <link>https://phys.org/news/2025-08-feasibility-kms-interstellar-visitor.html</link>
+                <category>Planetary Sciences </category>
+                <pubDate>Mon, 04 Aug 2025 09:22:05 EDT</pubDate>
+                <guid isPermaLink="false">news673518122</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/could-we-launch-a-miss.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Crypto mogul flies to space aboard latest Blue Origin flight</title>
+                <description>A Blue Origin rocket launched cryptocurrency entrepreneur Justin Sun and five others on a trip to the edge of space and back.</description>
+                <link>https://phys.org/news/2025-08-crypto-mogul-flies-space-aboard.html</link>
+                <category>Space Exploration </category>
+                <pubDate>Mon, 04 Aug 2025 08:10:01 EDT</pubDate>
+                <guid isPermaLink="false">news673513707</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2023/space.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Image: Webb takes a fresh look at a classic deep field</title>
+                <description>This image from the NASA/ESA/CSA James Webb Space Telescope revisits one of the most iconic regions of the sky, the Hubble Ultra Deep Field, through the eyes of two of Webb&#039;s instruments. The result is a detailed view that reveals thousands of distant galaxies, some dating back to the earliest periods of cosmic history.</description>
+                <link>https://phys.org/news/2025-08-image-webb-fresh-classic-deep.html</link>
+                <category>Astronomy </category>
+                <pubDate>Sat, 02 Aug 2025 10:00:01 EDT</pubDate>
+                <guid isPermaLink="false">news673260897</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/image-webb-takes-a-fre.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Bid to relocate US Space Shuttle Discovery faces museum pushback</title>
+                <description>Tucked inside President Donald Trump&#039;s flagship tax and spending bill last month was a little-noticed provision to relocate the iconic space shuttle Discovery from a museum outside Washington to Houston.</description>
+                <link>https://phys.org/news/2025-08-relocate-space-shuttle-discovery-museum.html</link>
+                <category>Space Exploration </category>
+                <pubDate>Sat, 02 Aug 2025 05:50:02 EDT</pubDate>
+                <guid isPermaLink="false">news673330952</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/this-picture-dated-apr.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>SpaceX delivers four astronauts to the International Space Station just 15 hours after launch</title>
+                <description>SpaceX delivered a fresh crew to the International Space Station on Saturday, making the trip in a quick 15 hours.</description>
+                <link>https://phys.org/news/2025-08-spacex-astronauts-international-space-station.html</link>
+                <category>Space Exploration </category>
+                <pubDate>Sat, 02 Aug 2025 05:20:50 EDT</pubDate>
+                <guid isPermaLink="false">news673330845</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/spacex-delivers-four-a.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Astronauts launch to the space station after sidelined by Boeing&#039;s troubled Starliner</title>
+                <description>Astronauts sidelined for the past year by Boeing&#039;s Starliner trouble blasted off to the International Space Station on Friday, getting a lift from SpaceX.</description>
+                <link>https://phys.org/news/2025-08-astronauts-space-station-sidelined-boeing.html</link>
+                <category>Space Exploration </category>
+                <pubDate>Fri, 01 Aug 2025 15:27:41 EDT</pubDate>
+                <guid isPermaLink="false">news673280854</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/astronauts-launch-to-t.jpg" width="90" height="90" />            </item>
+                        <item>
+                <title>Using starlight to measure greenhouse gases</title>
+                <description>University of Warwick astronomers, in partnership with institutions in Spain, are showing how astronomy tools, that are usually used to study stars, can be repurposed as climate sensors, helping us track how Earth&#039;s atmosphere is changing in the face of global warming.</description>
+                <link>https://phys.org/news/2025-08-starlight-greenhouse-gases.html</link>
+                <category>Planetary Sciences </category>
+                <pubDate>Fri, 01 Aug 2025 11:20:02 EDT</pubDate>
+                <guid isPermaLink="false">news673265486</guid>
+                <media:thumbnail url="https://scx1.b-cdn.net/csz/news/tmb/2025/astronomers-use-starli.jpg" width="90" height="90" />            </item>
+                    </channel>
+</rss>
