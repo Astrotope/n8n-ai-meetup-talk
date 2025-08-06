@@ -8,6 +8,8 @@
 
 *A comprehensive comparison guide for choosing the right automation platform for your organization*
 
+[Back to TOC](./README.md#table-of-contents)
+
 ## Executive Summary
 
 The workflow automation landscape is dominated by three major platforms, each targeting different user needs and technical capabilities:
@@ -429,3 +431,5 @@ Consider starting with the platform that best matches your current technical cap
 - [n8n vs Make vs Zapier Comparison](https://www.digidop.com/blog/n8n-vs-make-vs-zapier)
 
 *Note: Pricing and feature information accurate as of January 2025. Integration counts vary by source and date. Per-execution vs per-operation pricing models create different cost profiles - understanding these differences is crucial for platform selection. Currency note: n8n pricing in EUR, Make/Zapier pricing in USD. Always check official websites and test actual workflows to understand real costs for your specific use case.*
+
+[Back to TOC](./README.md#table-of-contents)

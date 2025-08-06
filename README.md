@@ -30,6 +30,13 @@ These n8n workflows serve as practical demonstrations of n8n's automation capabi
 - [Configuration Notes](#configuration-notes)
 - [Slack Integration Setup](#slack-integration-setup)
 
+**Additional Resources**
+- [Workflow Platform Comparison: n8n vs Make vs Zapier](./N8N_MAKE_ZAPIER_COMPARISON.md)
+- [Understanding Text Embeddings (Detailed Guide)](./TEXT_EMBEDDING_EXPLAINED.md)
+
+**Presentation**
+- [n8n Talk Slides (PDF)](./n8n-talk.pdf)
+
 ## About These Demonstration Workflows
 
 The demonstration workflows were built around n8n and Slack, with the addition of Pinecone as a vector database. As there are a large number of integrations available in n8n, I chose Slack - a familiar platform - to demonstrate some of the key automation concepts and capabilities.

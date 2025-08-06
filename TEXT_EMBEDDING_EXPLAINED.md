@@ -8,6 +8,8 @@
 
 *How the astronomy workflows transform text into intelligent, searchable knowledge*
 
+[Back to TOC](./README.md#table-of-contents)
+
 ## The Problem We're Solving
 
 Imagine you work at a research institution and need to stay current with astronomy discoveries. Every day, dozens of new articles are published. A colleague asks you: *"What has the James Webb telescope discovered about exoplanet atmospheres?"*
@@ -497,3 +499,5 @@ The astronomy workflows provide a glimpse into this future - where intelligent s
 [^2]: Vector database concepts and architecture from Pinecone's [Vector Database Guide](https://www.pinecone.io/learn/vector-database/)
 
 *Note: While n8n documentation on RAG implementation was referenced, specific technical details were derived from analysis of the actual workflow implementations in this repository.*
+
+[Back to TOC](./README.md#table-of-contents)
