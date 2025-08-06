@@ -12,12 +12,23 @@ These n8n workflows serve as practical demonstrations of n8n's automation capabi
 
 ## Table of Contents
 
+**Getting Started**
+- [About These Demonstration Workflows](#about-these-demonstration-workflows)
+- [Services Required to run these Workflows](#services-required-to-run-these-workflows)
 - [How to Import Workflows into n8n](#how-to-import-workflows-into-n8n)
-- [Ask an Astronomer Slack Chatbot](#ask-an-astronomer-slack-chatbot)
-- [Ingest Astronomy Articles from RSS Feed](#ingest-astronomy-articles-from-rss-feed)
-- [RAG Agent-Assisted Chat with Astronomy Articles](#rag-agent-assisted-chat-with-astronomy-articles)
-- [RSS Feed Summary to Slack](#rss-feed-summary-to-slack)
-- [Web Contact Form to Slack](#web-contact-form-to-slack)
+
+**Demonstration Workflows**
+  - [Ask an Astronomer Slack Chatbot](#ask-an-astronomer-slack-chatbot)
+  - [Ingest Astronomy Articles from RSS Feed](#ingest-astronomy-articles-from-rss-feed)
+  - [RAG Agent-Assisted Chat with Astronomy Articles](#rag-agent-assisted-chat-with-astronomy-articles)
+  - [RSS Feed Summary to Slack](#rss-feed-summary-to-slack)
+  - [Web Contact Form to Slack](#web-contact-form-to-slack)
+
+**Technical Documentation**
+- [Technical Stack](#technical-stack)
+- [Setup Requirements](#setup-requirements)
+- [Configuration Notes](#configuration-notes)
+- [Slack Integration Setup](#slack-integration-setup)
 
 ## About These Demonstration Workflows
 
@@ -26,6 +37,8 @@ The demonstration workflows were built around n8n and Slack, with the addition o
 Pinecone was included to demonstrate how vector stores work and how to use them as part of a RAG (Retrieval-Augmented Generation) system, showcasing modern AI-powered workflow capabilities.
 
 Because I am passionate about astronomy and astrophysics, I built the demonstration workflows around extracting and using data from the [Phys.org](https://phys.org/) website, creating practical examples that combine my interests with real-world automation scenarios.
+
+[Back to TOC](#table-of-contents)
 
 ## Services Required to run these Workflows
 
@@ -42,6 +55,8 @@ Because I am passionate about astronomy and astrophysics, I built the demonstrat
 1. Click the settings icon (gear wheel) in the top-right
 2. Select "Billing" from the left-hand menu to setup a credit card and purchase credits (~$5 USD)
 3. Select "API keys" from the left-hand menu and click "+ Create new secret key" to generate your API key
+
+[Back to TOC](#table-of-contents)
 
 ## How to Import Workflows into n8n
 
@@ -66,6 +81,8 @@ The workflow will automatically populate with all nodes and connections from the
    - **Pinecone** - For vector database operations
 
    If you use the same credential names as already referenced in the workflow nodes, they should automatically populate (though this isn't guaranteed). Otherwise, you'll need to manually assign your credentials to each relevant node.
+
+[Back to TOC](#table-of-contents)
 
 ## Ask an Astronomer Slack Chatbot
 
@@ -204,6 +221,8 @@ A simple contact form integration that captures website visitor inquiries and fo
 - **Slack**: Team communication and notifications
 - **Phys.org**: RSS feed source for astronomy articles
 
+[Back to TOC](#table-of-contents)
+
 ## Setup Requirements
 
 1. n8n instance with required node packages
@@ -211,6 +230,8 @@ A simple contact form integration that captures website visitor inquiries and fo
 3. Pinecone vector database setup
 4. Slack workspace and bot tokens
 5. Webhook configurations for triggers
+
+[Back to TOC](#table-of-contents)
 
 ## Configuration Notes
 
@@ -262,6 +283,8 @@ A simple contact form integration that captures website visitor inquiries and fo
 - Space news RSS feed used by workflows: [https://phys.org/rss-feed/space-news/](https://phys.org/rss-feed/space-news/)
 - Example article format: [Webb fresh take on a classic deep field](https://phys.org/news/2025-08-image-webb-fresh-classic-deep.html)
 - Sample RSS feed data: `phys-org-space-news-example-feed.rss` (included in repository)
+
+[Back to TOC](#table-of-contents)
 
 ## Slack Integration Setup
 
@@ -402,3 +425,5 @@ Navigate to **OAuth & Permissions** in your Slack app settings.
 **Message Formatting Issues**:
 - Test Block Kit JSON using [Slack's Block Kit Builder](https://app.slack.com/block-kit-builder)
 - Verify proper escaping of special characters in message content
+
+[Back to TOC](#table-of-contents)
