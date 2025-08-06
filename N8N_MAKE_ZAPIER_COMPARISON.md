@@ -18,7 +18,7 @@ The workflow automation landscape is dominated by three major platforms, each ta
 | **Hosting Options** | Self-hosted + Cloud | Cloud Only | Cloud Only |
 | **Pricing Model** | Per workflow execution | Per operation | Per task |
 | **Free Tier** | Unlimited (self-hosted) | 1,000 operations/month | 100 tasks/month |
-| **Integration Count** | 400+ | 1,000+ | 8,000+ |
+| **Integration Count** | 400+ | 2,000+ | 8,000+ |
 | **Code Support** | Full JS/Python | Limited | Basic (Code by Zapier) |
 | **Data Control** | Complete (self-hosted) | Limited | Limited |
 | **Learning Curve** | Steep | Moderate | Gentle |
@@ -29,11 +29,13 @@ The workflow automation landscape is dominated by three major platforms, each ta
 
 **Strengths:**
 - **Open Source Freedom**: Complete access to source code and self-hosting capabilities
-- **Advanced Technical Features**: Full JavaScript and Python support for complex logic
+- **HTTP Node for Universal API Access**: Connect to any service with an API without waiting for pre-built connectors
+- **Advanced Technical Features**: Full JavaScript and Python support for complex logic and data transformations
+- **Custom Node Development**: Build and share your own integrations for specific business needs
 - **Data Security**: Keep sensitive data on your own infrastructure
 - **Cost Efficiency**: Free self-hosted option eliminates per-execution costs
 - **AI Integration**: Excellent support for modern AI workflows and vector databases
-- **Customization**: Build custom nodes and modify platform behavior
+- **Maximum Extensibility**: Unlimited customization through code nodes and custom functions
 
 **Weaknesses:**
 - **Technical Complexity**: Requires development skills for advanced features
@@ -57,11 +59,13 @@ The workflow automation landscape is dominated by three major platforms, each ta
 
 **Strengths:**
 - **Intuitive Visual Interface**: Drag-and-drop workflow builder with clear logic flow
+- **AI-Powered Automation**: AI Agents that adapt in real-time, 350+ AI apps, AI Assistant, and AI Tools
 - **Balanced Complexity**: More advanced than Zapier, simpler than n8n
 - **Cost-Effective**: Competitive pricing for medium-volume automation
 - **Data Transformation**: Strong built-in tools for manipulating and formatting data
 - **Real-time Processing**: Instant triggers and webhook support
 - **Router/Filter Logic**: Advanced conditional processing capabilities
+- **Enterprise Features**: Custom functions, on-premise agent, 300+ Make API endpoints
 
 **Weaknesses:**
 - **Cloud-Only**: No self-hosting option for data control
@@ -76,11 +80,12 @@ The workflow automation landscape is dominated by three major platforms, each ta
 - Budget-conscious teams needing advanced features
 - Marketing and sales automation
 
-**Pricing**:
+**Pricing** (10,000 operations/month baseline):
 - **Free**: 1,000 operations per month
-- **Core**: 10,000 operations/month (~$9)
-- **Pro**: 40,000 operations/month (~$16)
-- **Teams**: 80,000 operations/month (~$29)
+- **Core**: $9/month with unlimited active scenarios, scheduled scenarios down to 1-minute intervals
+- **Pro**: $16/month with priority execution, custom variables, full-text search
+- **Teams**: $29/month with team roles, scenario templates, analytics dashboard
+- **Enterprise**: Custom pricing with 24/7 support, advanced security, overage protection
 
 ### Zapier: The Integration Giant
 
@@ -158,18 +163,23 @@ The workflow automation landscape is dominated by three major platforms, each ta
 ### Integration Methods
 
 **n8n**:
-- HTTP nodes for API calls
+- **HTTP Node**: Universal API connector - integrate with any service that has an API
+- **Code Nodes**: Full JavaScript/Python execution for complex business logic
 - Database connections (MySQL, PostgreSQL, MongoDB)
-- File system access
-- Custom nodes development
+- File system access and binary data processing
+- Custom nodes development and sharing
 - Webhook triggers and responses
+- Vector database operations for AI workflows
 
 **Make**:
-- Pre-built app modules
+- 2,000+ pre-built app modules
+- AI applications and intelligent automation tools
 - HTTP requests with authentication
 - Webhooks and instant triggers
-- Custom API connections
+- Custom API connections and custom apps
 - JSON/XML parsing tools
+- On-premise agent for local network access
+- 300+ Make API endpoints for platform automation
 
 **Zapier**:
 - 8,000+ app integrations
@@ -181,18 +191,21 @@ The workflow automation landscape is dominated by three major platforms, each ta
 ### Data Handling
 
 **n8n**:
-- Full JavaScript expressions
-- Python code execution
-- Complex data transformations
-- Vector database operations
-- Binary data processing
+- **Full JavaScript/Python Code Execution**: Unlimited programming capabilities
+- **HTTP Node Data Processing**: Transform API responses with custom code
+- Complex data transformations and business logic
+- Vector database operations for AI/ML workflows
+- Binary data processing and file manipulation
+- Custom function creation and reuse
 
 **Make**:
-- Built-in transformation functions
-- Mathematical operations
-- Text manipulation tools
-- Date/time formatting
+- Built-in transformation functions and custom functions (Enterprise)
+- AI-powered data categorization and analysis
+- Mathematical operations and advanced calculations
+- Text manipulation tools and intelligent text processing
+- Date/time formatting and scheduling
 - Router logic for conditional processing
+- 5GB data transfer per 10k operations (scalable)
 
 **Zapier**:
 - Formatter by Zapier
@@ -207,7 +220,7 @@ The workflow automation landscape is dominated by three major platforms, each ta
 |--------|-----|------|--------|
 | **Max Operations/Hour** | Unlimited (self-hosted) | Plan-dependent | Plan-dependent |
 | **Concurrent Workflows** | Server-dependent | Limited | Plan-based |
-| **Data Volume** | No inherent limits | 5MB per operation | Limited by task definition |
+| **Data Volume** | No inherent limits | 5GB per 10k ops (scalable) | Limited by task definition |
 | **Error Handling** | Advanced retry/catch | Built-in retry | Basic retry mechanism |
 | **Monitoring** | Full logging/metrics | Execution history | Run history |
 
@@ -284,20 +297,22 @@ The workflow automation landscape is dominated by three major platforms, each ta
 ## Decision Framework
 
 ### Choose n8n if you:
-- Have technical team members
-- Need advanced AI/ML integrations
-- Require complete data control
-- Process high volumes of data
-- Want unlimited scalability
-- Need custom workflow logic
+- Have technical team members comfortable with code
+- Need to integrate with custom APIs or services without pre-built connectors
+- Require complete data control and self-hosting
+- Process high volumes of data cost-effectively
+- Want unlimited scalability and customization
+- Need complex business logic beyond visual workflows
+- Require advanced AI/ML integrations and vector databases
 
 ### Choose Make if you:
-- Want visual workflow design
-- Need moderate complexity features
-- Require cost-effective automation
-- Have some technical users
-- Need strong data transformation
+- Want visual workflow design with AI-powered automation
+- Need moderate complexity features with enterprise scalability
+- Require cost-effective automation for growing businesses
+- Have some technical users but prefer no-code approach
+- Need strong data transformation with intelligent processing
 - Want balance of features and simplicity
+- Benefit from AI Agents and real-time adaptive automation
 
 ### Choose Zapier if you:
 - Have non-technical users
@@ -339,22 +354,29 @@ The workflow automation landscape is dominated by three major platforms, each ta
 - **API-First**: All platforms improving programmatic access
 
 ### Platform Evolution
-- **n8n**: Improving UI/UX, expanding integrations
-- **Make**: Adding AI features, enterprise capabilities  
-- **Zapier**: Enhancing automation intelligence, business process tools
+- **n8n**: Improving UI/UX, expanding integrations, enhancing AI workflow support
+- **Make**: Leading in AI-powered automation with Agents, expanding enterprise features
+- **Zapier**: Enhancing automation intelligence, business process tools, AI integrations
 
 ## Conclusion
 
 The choice between n8n, Make, and Zapier depends on your organization's technical capabilities, data requirements, and growth trajectory:
 
-- **For technical teams seeking maximum flexibility**: n8n provides unmatched customization and cost efficiency
-- **For balanced needs and visual workflows**: Make offers the best middle ground
+- **For technical teams seeking maximum flexibility**: n8n provides unmatched customization, universal API connectivity, and cost efficiency
+- **For balanced needs with AI-powered automation**: Make offers the best middle ground with intelligent agents and visual workflows
 - **For simplicity and broad integration coverage**: Zapier remains the easiest path to automation
 
-The astronomy workflows in this repository demonstrate n8n's strength in complex, AI-powered scenarios that would be difficult or expensive to implement in other platforms. However, simpler notification and data sync tasks might be more efficiently handled by Make or Zapier.
+The astronomy workflows in this repository demonstrate n8n's strength in complex, AI-powered scenarios where the HTTP node enables seamless integration with any API, and code nodes provide unlimited data processing capabilities. This level of flexibility would be difficult or expensive to replicate in other platforms without extensive workarounds.
 
 Consider starting with the platform that best matches your current technical capacity, while keeping migration paths open as your automation needs evolve.
 
 ---
+
+## References
+
+- [n8n Pricing](https://n8n.io/pricing/)
+- [Make Pricing](https://www.make.com/en/pricing)
+- [Zapier Pricing](https://zapier.com/pricing)
+- [n8n vs Make vs Zapier Comparison](https://www.digidop.com/blog/n8n-vs-make-vs-zapier)
 
 *Note: Pricing and feature information accurate as of January 2025. Check individual platform websites for current details and offerings.*
