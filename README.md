@@ -4,15 +4,40 @@ A collection of n8n workflows for astronomy content management, AI chatbots, and
 
 ## Table of Contents
 
+- [How to Import Workflows into n8n](#how-to-import-workflows-into-n8n)
 - [Ask an Astronomer Slack Chatbot](#ask-an-astronomer-slack-chatbot)
 - [Ingest Astronomy Articles from RSS Feed](#ingest-astronomy-articles-from-rss-feed)
 - [RAG Agent-Assisted Chat with Astronomy Articles](#rag-agent-assisted-chat-with-astronomy-articles)
 - [RSS Feed Summary to Slack](#rss-feed-summary-to-slack)
 - [Web Contact Form to Slack](#web-contact-form-to-slack)
 
+## How to Import Workflows into n8n
+
+To use these workflows in your n8n instance, follow these steps:
+
+1. **Create a new workflow** - In your n8n dashboard, click "Create Workflow"
+
+2. **Copy the JSON file** - Click on any workflow JSON file link below (e.g., [`ask-an-astronomer-slack-channel-chatbot.json`](./ask-an-astronomer-slack-channel-chatbot.json))
+
+3. **Get the raw content** - On the GitHub file page, click the "Copy raw file" button (📋 icon) located just to the right of the "Raw" button
+
+4. **Paste into n8n** - Go back to your new n8n workflow, click on the blank canvas, and paste:
+   - **Windows**: Ctrl+V
+   - **Mac**: Command+V (⌘+V)
+   - **Linux**: Ctrl+V
+
+The workflow will automatically populate with all nodes and connections from the JSON file.
+
+5. **Configure credentials** - You will need to create your own credentials in n8n for:
+   - **Slack** - For Slack integrations and bot functionality
+   - **OpenAI** - For AI chat models and embeddings
+   - **Pinecone** - For vector database operations
+
+   If you use the same credential names as already referenced in the workflow nodes, they should automatically populate (though this isn't guaranteed). Otherwise, you'll need to manually assign your credentials to each relevant node.
+
 ## Ask an Astronomer Slack Chatbot
 
-**File:** `ask-an-astronomer-slack-channel-chatbot.json`
+**File:** [`ask-an-astronomer-slack-channel-chatbot.json`](./ask-an-astronomer-slack-channel-chatbot.json)
 
 An intelligent Slack chatbot that acts as "AstroGuide," an expert astronomer and cosmic storyteller. The workflow responds to messages in the #ask-an-astronomer Slack channel with scientifically accurate answers while occasionally blending in imaginative speculation and cosmic metaphors.
 
@@ -33,7 +58,7 @@ An intelligent Slack chatbot that acts as "AstroGuide," an expert astronomer and
 
 ## Ingest Astronomy Articles from RSS Feed
 
-**File:** `ingest-astronomy-articles-from-rss-feed-into-vector-store.json`
+**File:** [`ingest-astronomy-articles-from-rss-feed-into-vector-store.json`](./ingest-astronomy-articles-from-rss-feed-into-vector-store.json)
 
 A comprehensive data ingestion pipeline that fetches astronomy articles from Phys.org RSS feeds, processes them, and stores them in a Pinecone vector database for later retrieval by AI agents.
 
@@ -64,7 +89,7 @@ A comprehensive data ingestion pipeline that fetches astronomy articles from Phy
 
 ## RAG Agent-Assisted Chat with Astronomy Articles
 
-**File:** `rag-agent-assisted-chat-with-astronomy-articles-in-vector-store.json`
+**File:** [`rag-agent-assisted-chat-with-astronomy-articles-in-vector-store.json`](./rag-agent-assisted-chat-with-astronomy-articles-in-vector-store.json)
 
 A public-facing chat interface powered by a RAG (Retrieval-Augmented Generation) system that uses the stored astronomy articles to answer questions about current space news and developments.
 
@@ -87,7 +112,7 @@ A public-facing chat interface powered by a RAG (Retrieval-Augmented Generation)
 
 ## RSS Feed Summary to Slack
 
-**File:** `rss-feed-summary-to-slack.json`
+**File:** [`rss-feed-summary-to-slack.json`](./rss-feed-summary-to-slack.json)
 
 A scheduled workflow that creates daily summaries of astronomy news from RSS feeds and posts them to Slack channels, providing team members with curated astronomy updates.
 
@@ -113,7 +138,7 @@ A scheduled workflow that creates daily summaries of astronomy news from RSS fee
 
 ## Web Contact Form to Slack
 
-**File:** `web-contact-form-to-slack.json`
+**File:** [`web-contact-form-to-slack.json`](./web-contact-form-to-slack.json)
 
 A simple contact form integration that captures website visitor inquiries and forwards them to a designated Slack channel for team follow-up.
 
