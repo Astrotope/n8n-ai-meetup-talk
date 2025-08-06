@@ -355,11 +355,10 @@ Our astronomy workflows rely on several sophisticated technologies working toget
 
 ### Performance Characteristics
 
-**Speed**: Typical search completes in 100-200 milliseconds
-**Accuracy**: Relevant results typically score 0.7+ similarity
-**Scale**: Can efficiently search through hundreds of thousands of articles
 **Reliability**: Automated error handling and retry mechanisms
 **Cost-efficiency**: Optimized to minimize API usage while maintaining quality
+
+*Note: Actual search speed, accuracy scores, and scale depend on database configuration, article volume, query complexity, and infrastructure setup.*
 
 ## Understanding the Limitations
 
