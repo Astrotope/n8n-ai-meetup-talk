@@ -21,7 +21,7 @@ The workflow automation landscape is dominated by three major platforms, each ta
 | **Integration Count** | 1,000+ | 1,500+ | 7,000+ |
 | **Code Support** | Full JS/Python | Limited | Basic (Code by Zapier) |
 | **Data Control** | Complete (self-hosted) | Limited | Limited |
-| **Learning Curve** | Steep | Moderate | Gentle |
+| **Learning Curve** | Moderate++ | Moderate | Gentle |
 
 ## Detailed Platform Analysis
 
