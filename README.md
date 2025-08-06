@@ -17,6 +17,14 @@ A collection of n8n workflows for astronomy content management, AI chatbots, and
 - [RSS Feed Summary to Slack](#rss-feed-summary-to-slack)
 - [Web Contact Form to Slack](#web-contact-form-to-slack)
 
+## About These Demonstration Workflows
+
+The demonstration workflows were built around n8n and Slack, with the addition of Pinecone as a vector database. As there are a large number of integrations available in n8n, I chose Slack - a familiar platform - to demonstrate some of the key automation concepts and capabilities.
+
+Pinecone was included to demonstrate how vector stores work and how to use them as part of a RAG (Retrieval-Augmented Generation) system, showcasing modern AI-powered workflow capabilities.
+
+Because I am passionate about astronomy and astrophysics, I built the demonstration workflows around extracting and using data from the [Phys.org](https://phys.org/) website, creating practical examples that combine my interests with real-world automation scenarios.
+
 ## How to Import Workflows into n8n
 
 To use these workflows in your n8n instance, follow these steps:
