@@ -107,6 +107,8 @@ A comprehensive data ingestion pipeline that fetches astronomy articles from Phy
 
 A public-facing chat interface powered by a RAG (Retrieval-Augmented Generation) system that uses the stored astronomy articles to answer questions about current space news and developments.
 
+**Prerequisites:** This workflow requires the Pinecone vector store to be populated with articles from the "Ingest Astronomy Articles from RSS Feed" workflow.
+
 **Key Features:**
 - Public chat interface with astronomy theme
 - Carl Sagan persona for engaging conversations
